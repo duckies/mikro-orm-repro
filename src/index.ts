@@ -24,7 +24,7 @@ async function bootstrap() {
   await em.findOne(Book, {
     children: { id: '123ABC', type: AuthorType.Apple },
   });
-  // select "b0".* from "book" as "b0" left join "author" as "a1" on "b0"."id" = "a1"."book_id" where ("b0"."id", "b0"."type") in (('123ABC', 'Apple')) limit 1
+  //
 
   await orm.close(true);
 }
